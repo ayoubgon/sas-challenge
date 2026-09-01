@@ -49,3 +49,45 @@ else
 
 //level 3
 //Basic Calculator
+let num1 = 23 ;
+let num2 = 34 ;
+const operator = ["+", "-", "*", "/"];
+switch (operator[]){
+    case operator[0]:
+        console.log(num1 + num2);
+        break
+    case operator [1]:
+        console.log(num1 - num2);
+        break
+    case operator[0]:
+        console.log(num1 * num2);
+        break
+    case operator [1]:
+        if (num1 == 0 || num2 == 0)
+            break
+        console.log(num1 / num2);
+        break
+    }
+
+    //Valid Triangle
+    let ang1;
+    let ang2;
+    let ang3;
+    if (ang1 == 0 || ang2 == 0 || ang3 ==0)
+        console.log("not triangle")
+    else if (ang1 + ang2 + ang3 != 180)
+        console.log("not triangle")
+    else
+        console.log("it triangle")
+
+    //BMI Calculator
+    let weight ;
+    let height ;
+    let BMI = weight / (height * height)
+
+    if (BMI < 18.5)
+        console.log("Underweight");
+    else if (BMI <= 24.9 && BMI >= 18.5)
+        console.log("Normal");
+    else
+        console.log("Overweight");
