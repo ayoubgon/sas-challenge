@@ -26,7 +26,9 @@ let namber = 5;
 
 let k = 1;
 while(k <= 50){
-    if (k % 3 == 0 )
+    if (k % 5 == 0 && k % 3 == 0)
+        console.log("FizzBuzz");
+    else if (k % 3 == 0 )
         console.log("Fizz");
     else if (k % 5 == 0)
         console.log("Buzz");
