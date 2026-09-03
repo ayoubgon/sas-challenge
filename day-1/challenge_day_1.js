@@ -45,6 +45,8 @@ let str = "ayoub";
 for( let d = 0 , counter = 0 ;i < str.length; i++){
     if (str[d] == 'a' || str[d] == 'e' || str[d] == 'i' || str[d] == 'o' || str[d] == 'u')
         counter++;
+    else if (str[d] == 'A' || str[d] == 'E' || str[d] == 'I' || str[d] == 'O' || str[d] == 'U')
+        counter++;
    } 
    console.log(counter);
 
@@ -59,7 +61,16 @@ for(let co = 0 ; co < 5; co++){
 for (let rang = 3 ; Rang <=50 ; rang++){
     for(let checker = 2 ; checker < rang ;checker++ ){
         if (range % checker == 0){
-            
-        }    
+            break;
+        }
     }
+    console.log(rang);
+}
+// Right-Angled Triangle
+for(let i = 1 ; i <= 5 ;i++){
+    let resolt = "";
+    for(let j = 1; j <= i ; j++){
+        resolt += "*";
+    }
+console.log(resolt);
 }
