@@ -58,13 +58,16 @@ for(let co = 0 ; co < 5; co++){
     process.stdout.write("\n");
 }
 // Prime Numbers
-for (let rang = 3 ; Rang <=50 ; rang++){
+for (let rang = 3 ; rang <=50 ; rang++){
+  let tr_fl = true;
     for(let checker = 2 ; checker < rang ;checker++ ){
-        if (range % checker == 0){
+        if (rang % checker == 0){
+            tr_fl = false;
             break;
         }
     }
-    console.log(rang);
+    if (tr_fl == true)
+        console.log(rang);
 }
 // Right-Angled Triangle
 for(let i = 1 ; i <= 5 ;i++){

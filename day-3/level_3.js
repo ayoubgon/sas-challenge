@@ -33,23 +33,26 @@ function String_Compressor(str){
 }
 // Anagram Checker
 function Anagram_Checker(str, str1){
+    let backup = str1;
     if (str.length !=str.length)
         return false;
     for(let i = 0 ;i< str.length ;i++){
         let ex = 0 
-        for(let j = 0 ; j < str.length ; j++){
-            if (str[i] == str1[j])
+        for(let j = 0 ; j < backup.length ; j++){
+            if (str[i] == backup[j]){
                 ex = 1
+                backup = backup.slice(0,j) + backup.slice(j + 1)
+                break
+            }
         }
         if (ex != 1)
             return false
-             
     }
     return true
 }
 
 
-console.log(Anagram_Checker("minora", "romain"))
+console.log(Anagram_Checker("miaora", "romain"))
 // test
 str = "aaabbc";
 console.log(String_Compressor(str));

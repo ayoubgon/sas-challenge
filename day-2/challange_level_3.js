@@ -23,12 +23,14 @@ function filterOddNumbers(arr, callback){
     let i = 0, j = 0;
     let arr_re = [];
     while(arr[i]){
-        if (checkodd(arr[i])){
+        if (callback(arr[i])){
             arr_re[j] = arr[i];
             j++;
         }
         i++;
     } 
+    return arr_re;
 }
+console.log (filterOddNumbers([2, 5,6,7,8,9], checkodd));
 // test fun
-console.log (createMultiplier(3));
+
