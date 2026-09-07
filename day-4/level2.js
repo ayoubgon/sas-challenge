@@ -17,7 +17,7 @@ function Remove_Duplicates(arr){
     let stock = [];
     let k= 0;
     stock.push(arr[0])
-    for(let i = 0 ;i < arr.length;i++){
+    for(let i = 0 ; i < arr.length;i++){
         for(let j = 0 ;j < stock.length ;j++){
           k = j
             if (arr[i] == stock[j])
