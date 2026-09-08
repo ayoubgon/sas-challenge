@@ -44,21 +44,31 @@ const students = [
 ];
 
 
-function moyan_note(){
-
-    let studant_moyan = 0
-    let clas_moyan = []
-    for (note of students.notes){
-        for  ( let i = 0 ;i < note.length;i++){
-            console.log (notes[i])
-        } 
-        // console.log(studant_moyan)
-    }
-    // console.log(studant_moyan)
-
-
-
-
+function studentMoyan(obj) {
+  let total = 0;
+  for (let i = 0; i < obj.notes.length; i++) {
+    total += obj.notes[i];
+  }
+  return total / obj.notes.length;
 }
 
+function moyanNoteV1() {
+  let studMo = 0;
+  for (let i = 0; i < students.length; i++) {
+    studMo += studentMoyan(students[i]);
+  }
+  return studMo / students.length;
+}
+
+function moyanNoteV2() {
+  let studMo = 0;
+  for (let i = 0; i < students.length; i++) {
+    let total = 0;
+    for (let j = 0; j < students[i].notes.length; j++) {
+      total += students[i].notes[j];
+    }
+    studMo += total / students[i].notes.length;
+  }
+  return studMo / students.length;
+}
 moyan_note()
